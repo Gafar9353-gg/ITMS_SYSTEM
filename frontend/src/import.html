@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Import Lab Data</title>
+</head>
+<body>
+    <h1>Importing LAB201 Data...</h1>
+    <p id="status">Loading...</p>
+
+    <script>
+        // LAB201 - 35 PCs
+        const lab201 = [
+            {"id":"PC-001","name":"LAB201-PC01","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-002","name":"LAB201-PC02","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-003","name":"LAB201-PC03","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-004","name":"LAB201-PC04","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-005","name":"LAB201-PC05","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-006","name":"LAB201-PC06","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-007","name":"LAB201-PC07","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-008","name":"LAB201-PC08","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-009","name":"LAB201-PC09","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-010","name":"LAB201-PC10","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-011","name":"LAB201-PC11","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-012","name":"LAB201-PC12","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-013","name":"LAB201-PC13","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-014","name":"LAB201-PC14","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-015","name":"LAB201-PC15","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-016","name":"LAB201-PC16","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-017","name":"LAB201-PC17","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-018","name":"LAB201-PC18","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-019","name":"LAB201-PC19","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-020","name":"LAB201-PC20","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-021","name":"LAB201-PC21","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-022","name":"LAB201-PC22","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-023","name":"LAB201-PC23","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-024","name":"LAB201-PC24","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-025","name":"LAB201-PC25","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-026","name":"LAB201-PC26","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-027","name":"LAB201-PC27","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-028","name":"LAB201-PC28","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-029","name":"LAB201-PC29","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-030","name":"LAB201-PC30","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-031","name":"LAB201-PC31","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-032","name":"LAB201-PC32","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-033","name":"LAB201-PC33","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-034","name":"LAB201-PC34","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]},
+            {"id":"PC-035","name":"LAB201-PC35","location":"1st Floor","status":"working","lastChecked":"2026-06-20","assignedTo":"Student Use","specs":"Intel i5 8GB RAM 512GB SSD","os":"Windows 10","issue":"","events":[]}
+        ];
+
+        // Save to localStorage
+        localStorage.setItem('pcs', JSON.stringify(lab201));
+        document.getElementById('status').innerHTML = '✅ LAB201 (35 PCs) Imported Successfully!<br><br>Redirecting in 2 seconds...';
+        
+        setTimeout(() => {
+            // Redirect back to your app
+            window.location.href = 'http://localhost:5173'; // Change to your app URL
+        }, 2000);
+    </script>
+</body>
+</html>
