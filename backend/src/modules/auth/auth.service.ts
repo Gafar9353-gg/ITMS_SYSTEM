@@ -1,3 +1,5 @@
+import { generateToken, verifyToken } from "../../utils/jwt";
+
 // Make sure AuthService is exported as a class
 export class AuthService {
   async login(email: string, password: string) {
@@ -28,8 +30,12 @@ export class AuthService {
       };
     }
     
-    // Generate simple token
-    const token = Buffer.from(`${user.id}:${Date.now()}`).toString('base64');
+    // Generate valid JWT token
+    const token = generateToken({
+      id: user.id,
+      email: user.email,
+      role: user.role
+    });
     
     return {
       success: true,
@@ -46,10 +52,9 @@ export class AuthService {
 
   async verifyToken(token?: string) {
     if (!token) return false;
-    // Simple token verification
     try {
-      const decoded = Buffer.from(token, 'base64').toString();
-      return decoded.includes(':');
+      verifyToken(token);
+      return true;
     } catch {
       return false;
     }
